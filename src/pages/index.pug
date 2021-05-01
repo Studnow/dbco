@@ -1,0 +1,18 @@
+extends ./layout/main
+
+block variables
+
+  - var pageTitle = "Webpack + Pug";
+  - var description = "Description for Webpack + Pug"
+  - var pageClass = "body"
+  - var pageId = ''
+  - var headerLogo = require('./templates/page-blocks/header/logo.png')
+
+block header
+  include ./templates/page-blocks/header/header
+
+block content
+  include ./templates/template
+
+block footer
+  include ./templates/page-blocks/footer/footer

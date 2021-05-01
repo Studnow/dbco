@@ -1,0 +1,24 @@
+@import '../../../../styles/_vars'
+@import '../../../includes/nav-bars/nav-bar'
+.logo
+  min-height: 6.25rem
+  // background-image: $headerLogo
+
+.search
+  display: flex
+  .search-input
+    border-color: $description-text
+    border-style: solid
+    border-radius: .5rem
+    width: 80%
+    &:focus:not(:focus-visible)
+      outline: none
+    &:focus
+      border-color: $hover
+  .search-button
+    width: 10%
+    background-color: inherit
+    border: none
+    fill: $description-text
+    &:hover
+      fill: $hover

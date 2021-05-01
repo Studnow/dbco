@@ -1,0 +1,28 @@
+// @import './style.css'
+@import "~bootstrap/scss/bootstrap-grid"
+@import './_custom'
+@import '../pages/templates/template'
+@import './_vars'
+
+html
+  font-size: 16px
+
+.hello
+  color: $secondary
+  border-color: powderblue
+  border-style: solid
+  border-width: 2px
+  height: 16rem
+  font-family: 'Amarante'
+  background-image: url('../components/iamp-logo.svg')
+  background-repeat: no-repeat
+
+#app
+  font-family: $primary-font
+  font-weight: normal
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  #content
+    flex: 1 1 auto
