@@ -1,0 +1,39 @@
+.customers
+  // display: flex
+  // align-items: center
+  // justify-items: center
+  position: relative
+  z-index: 2
+  min-height: 100vh
+  margin-top: 300px
+  background: 100% center / contain $customers-photo no-repeat
+  .row
+    min-height: inherit
+  .customers_bottom-bg
+    min-height: 200px
+    background-color: $main-bg
+  .customers_text
+    .customers_text__ul
+      color: $white-text
+      font-size: 1.25rem
+      font-weight: bold
+      list-style: none
+      li
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          top: .6rem
+          left: -2rem
+          width: 12px
+          height: 12px
+          border-radius: 50%
+          background-color: #fff
+    .customers-photo
+      .customers-photo_img
+        position: relative
+        top: 50%
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: contain

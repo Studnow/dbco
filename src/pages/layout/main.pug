@@ -1,15 +1,16 @@
 block variables
 
 doctype html
-html(lang=ru)
+html(lang='ru')
   head
     title= pageTitle
     meta(name="description", content=description)
+    meta(name="viewport", content="width=device-width")
   body(class= pageClass)
     #app
       header
         block header
-      #content.container-fluid
+      main#content.container-fluid
         .content-wrapper.row.d-flex.justify-content-center.align-content-between
           block content
           block aside

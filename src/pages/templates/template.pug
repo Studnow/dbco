@@ -1,3 +1,14 @@
 block content
-  include ./page-blocks/content/what-is/what-is
-  include ./page-blocks/content/features/features
+  article.what-is-screen.container-fluid
+    include ./page-blocks/content/what-is/what-is
+  article.features-screen.container-fluid
+    include ./page-blocks/content/features/features
+  article.choice.p-0
+    .container-fluid.d-flex.align-content-center
+      include ./page-blocks/content/choice/choice
+    .container.divider
+    .constructor.container-fluid
+      include ./page-blocks/content/what-is-constructor/what-is-constructor
+    .customers.container-fluid
+      include ./page-blocks/content/customers/customers
+    .bottom-white-bg

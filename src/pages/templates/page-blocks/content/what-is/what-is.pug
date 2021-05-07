@@ -1,13 +1,11 @@
 - var bigLogo = require('./big-logo.svg')
 - var decorating = require('./decorating.svg')
 
-article.what-is-screen.container-fluid
-  .what-is-row.row.align-content-center
-    .col.container_what-is-logo
-      img(src=bigLogo, alt="what-is-logo").what-is-logo
-      //- img(src=decorating, alt="what-is-decor").what-is-decor
-    .col.container_what-is_text
-      h1 Что такое dbco?
-      p.what-is_text dbco включает в себя платформу и прикладные решения, разработанные на её основе, для хранения знаний и учетных данных. Платформа не является программным продуктом для конечного пользователя, который обычно работает с одним или несколькими прикладными решениями. Такой подход позволяет автоматизировать различные виды деятельности, используя единую технологическую базу.
-      button.what-is_button Попробовать прямо сейчас
-  hr
+.what-is-row.row.align-content-center
+  .col.container_what-is-logo
+    img(src=bigLogo, alt="what-is-logo").what-is-logo
+    //- img(src=decorating, alt="what-is-decor").what-is-decor
+  .col.container_what-is_text
+    h1 Что такое dbco?
+    p.what-is_text dbco включает в себя платформу и прикладные решения, разработанные на её основе, для хранения знаний и учетных данных. Платформа не является программным продуктом для конечного пользователя, который обычно работает с одним или несколькими прикладными решениями. Такой подход позволяет автоматизировать различные виды деятельности, используя единую технологическую базу.
+    a(href="/").what-is_button Попробовать прямо сейчас

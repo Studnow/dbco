@@ -1,27 +1,62 @@
 .features-screen
   position: relative
-  background-color: $main-bg
+  // background-color: $main-bg
+  min-height: 45vh
   .circle-img
     position: absolute
+    top: 2rem
+    left: calc(100vw / 2 - 350px)
+    width: 700px
+    height: 700px
+  .features-bg
+    background: center bottom / cover $decorFeaturesBot no-repeat
+    width: 100%
+    min-height: 100vh
+    position: absolute
+    left: 0
+    overflow: hidden
+    // max-width: inherit
+    z-index: 3
   .features_circle
-    // max-width: 900px
+    min-height: 80vh
+    position: relative
+    top: 2rem
+    row-gap: 5rem
+    // background-color: $main-bg
+    // .bg-between-blocks
+    //   position: absolute
+    //   bottom: 0
+    //   height: 500px
+    //   background-image: $decor-2
+    //   background-repeat: no-repeat
     .features_circle-wrapper
       display: flex
       flex-direction: column
       position: relative
       align-items: center
-      padding-top: 5rem
+      justify-content: center
+      padding: 1.5rem 0
+      max-height: 200px
+      min-height: 150px
+      min-width: 150px
+      // &:last-child
+      //   top: 6rem
       .features_circle__description
-        max-width: 300px
+        max-width: 250px
         background-color: $main-bg
         color: $description-text
+        font-weight: bold
+        padding: 15px
       .features_circle__icon
-        max-width: 300px
+        min-width: 200px
+        // max-width: 225px
         background-color: $main-bg
-        .icon
-          width: 150px
-          height: 150px
-          // z-index: 5
+        object-fit: contain
+        text-align: center
+        border-radius: 25%
+        img
+          width: 155px
+          height: 100px
       .features_circle__heading
         font-weight: bold
         text-align: center

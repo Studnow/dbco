@@ -2,6 +2,7 @@
 @import "../../node_modules/bootstrap/scss/variables"
 @import "../../node_modules/bootstrap/scss/mixins"
 @import "../../node_modules/bootstrap/scss/reboot"
+@import '../../node_modules/bootstrap/scss/mixins/_breakpoints'
 
 @font-face
   font-family: 'Amarante'
@@ -22,3 +23,19 @@
   src: local('YouTube Sans Dark ExtraBold'), local('YouTubeSansDark-ExtraBold'), url('../fonts/YouTubeSansDark-ExtraBold.woff2') format('woff2')
   font-weight: 800
   font-style: normal
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $primary
+  color: #fff
+
+input, textarea
+  outline: none
+  &:focus:required:invalid
+    border-color: red
+  &:required:valid
+    border-color: green
