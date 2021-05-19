@@ -1,0 +1,44 @@
+mixin card_left-img(img, title, description, author, date, ratingId)
+  .card_left-img
+    header.card_left-img_header
+      .card_left-img_icon
+        svg.icon
+          use(href=img)
+      .card_left-img__text.d-flex.flex-column
+        +rating(ratingId)
+        a(href="#!").card_left-img__text__title=title
+        span Автор:
+          span.px-2.card_left-img__text__author=author
+        span Дата:
+          span.px-2.card_left-img__text__date=date
+    p.card_left-img__description= description
+
+mixin checkbox
+  label.col-4
+    input.rating_checkbox(type="checkbox", name="rating_checkbox")
+    span.custom-checkbox
+
+mixin rating(id)
+  form(action="", method="post").rating.row.justify-content-between
+    +checkbox
+    fieldset.rating_rating-stars__fieldset.col-8
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="1" id= id + "-5" checked)
+      label(for= id + "-5").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="2" id= id + "-4")
+      label(for= id + "-4").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="3" id=id + "-3")
+      label(for= id + "-3").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="4" id= id + "-2")
+      label(for= id + "-2").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="5" id= id + "-1")
+      label(for= id + "-1").rating_rating-stars__label
+        svg.rating_rating-stars__star-icon
+          use(xlink:href='#star-icon')

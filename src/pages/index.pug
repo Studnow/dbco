@@ -7,9 +7,9 @@ block variables
   - var pageClass = "body"
   - var pageId = ''
   - var headerLogo = require('./templates/page-blocks/header/logo.png')
-  //- - var customersPhoto = require('./templates/page-blocks/content/customers/img/customers-photo.png')
 
 block header
+  include ./utils/_mix
   include ./utils/svg-sprite-icons
   include ./templates/page-blocks/header/header
 
