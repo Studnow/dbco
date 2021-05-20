@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  name: 'Aside',
   data () {
     return {
       p: null

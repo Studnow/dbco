@@ -1,8 +1,8 @@
-import './styles/main.sass';
-import Vue from 'vue';
-import Swiper from 'swiper'
+import "./styles/main.sass";
+// import { createApp } from "vue";
+import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
-import SwiperCore, { Navigation } from 'swiper/core';
+import SwiperCore, { Navigation } from "swiper/core";
 
 SwiperCore.use([Navigation]);
 
@@ -16,11 +16,7 @@ const slider = new Swiper(".swiper-container", {
   },
 });
 
-window.Vue = require('vue')
-
-// Vue.component('example-component', require('./components/Example.vue').default)
-// Vue.component("aside-component", require("./components/aside.vue").default);
-
-// const app = new Vue({
-//   el: '#app'
-// })
+// import Aside from './components/aside.vue'
+// import Example from './components/Example.vue'
+// createApp(Aside).mount('#something')
+// createApp(Example).mount("#example");
