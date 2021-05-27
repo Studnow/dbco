@@ -10,9 +10,42 @@ SwiperCore.use([Navigation]);
 
 const slider = new Swiper(".swiper-container", {
   slidesPerView: 3,
+  breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
+    992: {
+      slidesPerView: 2
+    },
+    1400: {
+      slidesPerView: 3
+    }
+  },
   navigation: {
     prevEl: ".swiper-button-prev",
     nextEl: ".swiper-button-next",
+  },
+});
+
+const sliderReview = new Swiper(".rewiev-slider", {
+  slidesPerView: 2,
+  wrapperClass: "rewiev-wrapper",
+  slideClass: "rewiev-slide",
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    992: {
+      slidesPerView: 2,
+    },
+    1400: {
+      slidesPerView: 3,
+    },
+  },
+  navigation: {
+    prevEl: ".rewiev-button-prev",
+    // nextEl: ".rewiev-button-next",
   },
 });
 

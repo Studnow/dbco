@@ -1,7 +1,7 @@
 .what-is-screen
-  background-color: $main-bg
   .what-is-row
-    height: 90vh
+    height: fit-content
+    min-height: 80vh
     position: relative
     background-image: $decorating
     background-repeat: no-repeat
@@ -22,23 +22,9 @@
       top: 0
       width: 80%
   .container_what-is_text
-    // z-index: 1
     .what-is_text
       font-size: 1.25rem
       font-weight: bold
-      padding-right: 10rem
     .what-is_button
-      display: inline-block
-      vertical-align: middle
-      padding-top: .5rem
-      text-decoration: none
-      text-align: center
-      background-color: $primary
-      border-radius: .5rem
-      width: 360px
-      height: 56px
-      color: $white-text
-      font-size: 1.5rem
-      font-weight: bold
-      &:hover
-        background-color: $hover
+      min-width: 296px
+      min-height: 56px

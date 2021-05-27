@@ -1,14 +1,15 @@
 .customers
-  // display: flex
-  // align-items: center
-  // justify-items: center
   position: relative
   z-index: 2
   min-height: 100vh
-  margin-top: 300px
-  background: 100% center / contain $customers-photo no-repeat
+  background: 100% center / cover $customers-photo no-repeat
+  @include media-breakpoint-up(lg)
+    background: 100% center / contain $customers-photo no-repeat
   .row
     min-height: inherit
+    background-color: $transparent-primary
+    @include media-breakpoint-up(lg)
+      background-color: transparent
   .customers_bottom-bg
     min-height: 200px
     background-color: $main-bg

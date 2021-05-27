@@ -1,10 +1,10 @@
 mixin card_left-img(img, title, description, author, date, ratingId)
   .card_left-img
-    header.card_left-img_header
+    header.card_left-img_header.mb-3
       .card_left-img_icon
         svg.icon
           use(href=img)
-      .card_left-img__text.d-flex.flex-column
+      .card_left-img__text.pe-sm-3.d-flex.flex-column
         +rating(ratingId)
         a(href="#!").card_left-img__text__title=title
         span Автор:
@@ -14,31 +14,43 @@ mixin card_left-img(img, title, description, author, date, ratingId)
     p.card_left-img__description= description
 
 mixin checkbox
-  label.col-4
+  label.col-12.col-sm-4.mb-2
     input.rating_checkbox(type="checkbox", name="rating_checkbox")
     span.custom-checkbox
 
 mixin rating(id)
-  form(action="", method="post").rating.row.justify-content-between
+  form(action="", method="post").rating.row.py-2.justify-content-between
     +checkbox
-    fieldset.rating_rating-stars__fieldset.col-8
-      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="1" id= id + "-5" checked)
-      label(for= id + "-5").rating_rating-stars__label
+    fieldset.rating_rating-stars__fieldset.py-1.me-3.col-12.col-sm-8
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="1" id= id + "-1" checked)
+      label(for= id + "-1").rating_rating-stars__label
         svg.rating_rating-stars__star-icon
           use(xlink:href='#star-icon')
-      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="2" id= id + "-4")
-      label(for= id + "-4").rating_rating-stars__label
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="2" id= id + "-2")
+      label(for= id + "-2").rating_rating-stars__label
         svg.rating_rating-stars__star-icon
           use(xlink:href='#star-icon')
       input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="3" id=id + "-3")
       label(for= id + "-3").rating_rating-stars__label
         svg.rating_rating-stars__star-icon
           use(xlink:href='#star-icon')
-      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="4" id= id + "-2")
-      label(for= id + "-2").rating_rating-stars__label
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="4" id= id + "-4")
+      label(for= id + "-4").rating_rating-stars__label
         svg.rating_rating-stars__star-icon
           use(xlink:href='#star-icon')
-      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="5" id= id + "-1")
-      label(for= id + "-1").rating_rating-stars__label
+      input.rating_rating-stars__radio-button(type="radio" name="rating-radio-button" value="5" id= id + "-5")
+      label(for= id + "-5").rating_rating-stars__label
         svg.rating_rating-stars__star-icon
           use(xlink:href='#star-icon')
+
+mixin card_top-img(cardClass)
+  article.card_top-img(class=cardClass)
+    span.top-img
+      //- img(src="", alt="customer-photo" width='125')
+    .rewiev-slide_text.p-3
+      span.customer-company-name.px-3 Юридическое агентство «Парфёнов и партнёры»
+      span.service-name.mb-3.px-3 Скорость разработки
+      p.customer-rewiev.mb-5.px-3 «Я не мог и представить, что мы сможем своими силами создать настолько сложное приложение за такое короткое время. Я не пытаюсь похвалить себя — эта заслуга dbco».
+      span.customer-name.px-3 Михаил Парфёнов
+      span.customer-company-position.px-3 Основатель
+

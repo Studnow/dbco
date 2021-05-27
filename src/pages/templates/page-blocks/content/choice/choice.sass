@@ -5,10 +5,23 @@
   background: $primary
   background-image: $blue-bg
   z-index: 2
+  .divider
+      min-height: 4rem
+      @include media-breakpoint-up(xl)
+        min-height: 200px
   .choice-row
     .decor-top
-      min-height: 600px
+      min-height: 1400px
+      @include media-breakpoint-up(sm)
+        min-height: 900px
+      @include media-breakpoint-up(xl)
+        min-height: 600px
+      @include media-breakpoint-up(xxl)
+        min-height: 46rem
   .choice_text
+    .white_head
+      font-size: 2rem
+      font-weight: bold
     .choice_text__description
       color: $white-text
       font-weight: bold

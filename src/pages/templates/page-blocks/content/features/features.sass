@@ -1,17 +1,22 @@
 .features-screen
   position: relative
-  // background-color: $main-bg
-  min-height: 45vh
+  background-color: $main-bg
+  min-height: 450px
+  // @include media-breakpoint-up(xxl)
+  //   min-height: 600px
   .circle-img
     position: absolute
     top: 2rem
     left: calc(100vw / 2 - 350px)
     width: 700px
     height: 700px
-  .features-bg
+  .features-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
     background: center bottom / cover $decorFeaturesBot no-repeat
     width: 100%
-    min-height: 100vh
+    min-height: fit-content
     position: absolute
     left: 0
     overflow: hidden
@@ -20,8 +25,11 @@
   .features_circle
     min-height: 80vh
     position: relative
-    top: 2rem
+    top: 5rem
     row-gap: 5rem
+    padding-bottom: 200px
+    // @include media-breakpoint-up(xxl)
+    //   row-gap: 2rem
     // background-color: $main-bg
     // .bg-between-blocks
     //   position: absolute
@@ -29,36 +37,37 @@
     //   height: 500px
     //   background-image: $decor-2
     //   background-repeat: no-repeat
-    .features_circle-wrapper
+    .wrapper
       display: flex
       flex-direction: column
       position: relative
       align-items: center
       justify-content: center
-      padding: 1.5rem 0
+      // padding: 1.5rem 0
       max-height: 200px
       min-height: 150px
       min-width: 150px
       // &:last-child
       //   top: 6rem
-      .features_circle__description
+      .description
         max-width: 250px
         background-color: $main-bg
         color: $description-text
         font-weight: bold
         padding: 15px
-      .features_circle__icon
-        min-width: 200px
+      .icon
+        padding: 15px
+        min-width: 250px
         // max-width: 225px
         background-color: $main-bg
         object-fit: contain
         text-align: center
-        border-radius: 25%
         img
           width: 155px
           height: 100px
-      .features_circle__heading
+      .heading
         font-weight: bold
         text-align: center
         color: $primary
-        font-size: 3rem
+        font-size: 2.5rem
+        padding-bottom: 10rem

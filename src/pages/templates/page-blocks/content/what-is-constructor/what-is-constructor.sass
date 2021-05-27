@@ -1,13 +1,17 @@
 .constructor
   color: black
   .constructor_text
-    h2
-      color: $white-text
+    .white_head
+      font-size: 2rem
       font-weight: bold
     .line
-      min-height: 60px
+      min-height: 30px
       width: 100%
       margin-bottom: 3rem
+      @include media-breakpoint-up(md)
+        min-height: 35px
+      @include media-breakpoint-up(xl)
+        min-height: 40px
       &.line_save-money
         background-color: $primary
         width: 88%
@@ -17,7 +21,7 @@
       &.line_optimization
         width: 74%
         background-color: $hover
-    .constructor_text__inner
-      .col-5
+    .inner
+      .p-percent
         align-self: flex-end
       // row-gap: 1rem

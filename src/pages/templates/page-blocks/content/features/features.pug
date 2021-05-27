@@ -1,37 +1,37 @@
 - var circle = require('./img/circle.png')
 
-.features-bg
-  img(src=circle, alt="circle").circle-img.align-self-center
-  .features_circle.justify-content-center.align-content-around.align-items-center.row.container.m-auto
-    section.col-3
-    section.col-3.features_circle-wrapper
-      .features_circle__icon
+.features-wrapper
+  img(src=circle, alt="circle").circle-img.align-self-center.d-none.d-xl-block
+  .features_circle.justify-content-center.align-items-center.row.container
+    //- section.col-3
+    section.col-12.col-sm-6.col-xl-5.order-1.order-xl-0.pb-5.wrapper
+      .icon
         img(src=require('./img/speed-icon.png'), alt="")
-      .features_circle__description
+      .description
         p поддержка в приложениях многоязычности, разграничения прав доступа на уровне платформы.
-    section.col-1
-    section.col-3.features_circle-wrapper
-      .features_circle__icon
-        img(src=require('./img/cloud-icon.png'), alt="")
-      .features_circle__description
-        p поддержка в приложениях многоязычности, разграничения прав доступа на уровне платформы.
-    section.col-2
     //- section.col-1
-    section.col-4.features_circle-wrapper.mt-4
-      .features_circle__icon
+    section.col-12.col-sm-6.col-xl-5.order-2.order-xl-1.pb-5.wrapper
+      .icon
+        img(src=require('./img/cloud-icon.png'), alt="")
+      .description
+        p поддержка в приложениях многоязычности, разграничения прав доступа на уровне платформы.
+    //- section.col-2
+    //- section.col-1
+    section.col-12.col-sm-6.col-xl-4.order-3.align-items-xl-end.wrapper
+      .icon
         img(src=require('./img/generator-icon.png'), alt="")
-      .features_circle__description
+      .description
         p поддержка в приложениях многоязычности, разграничения прав доступа на уровне платформы.
-    section.col-3.features_circle-wrapper
-      h2.features_circle__heading Преимущества и ключевые особенности
-    section.col-4.features_circle-wrapper.mt-4
-      .features_circle__icon
+    section.col-12.col-sm-12.col-xl-4.order-0.order-xl-4.wrapper
+      h3.heading Преимущества и ключевые особенности
+    section.col-12.col-sm-6.col-xl-4.order-4.align-items-xl-start.wrapper
+      .icon
         img(src=require('./img/data-icon.png'), alt="")
-      .features_circle__description
+      .description
         p поддержка в приложениях многоязычности, разграничения прав доступа на уровне платформы.
-    section.col-12.features_circle-wrapper
-      .features_circle__icon
+    section.col-12.col-sm-6.order-5.pb-xl-5.wrapper
+      .icon
         img(src=require('./img/languages-icon.png'), alt="")
-      .features_circle__description
+      .description
         p поддержка в приложениях многоязычности, разграничения прав доступа на уровне платформы.
     //- section.col-12.bg-between-blocks
