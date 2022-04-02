@@ -1,8 +1,1 @@
 /node_modules
-/.vscode
-/src
-/config
-/package-lock.json
-/package.json
-/postcss.config.js
-/server.js
